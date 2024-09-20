@@ -13,7 +13,7 @@ import TheComponent from "@/views/TheComponent.vue";
 import NotFound from "@/views/NotFound.vue";
 import TheUser from "@/views/TheUser.vue";
 import PiniaCounter from "@/views/PiniaCounter.vue";
-import FetchData from "@/views/fetchData.vue";
+import FetchData from "@/views/FetchData.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

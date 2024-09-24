@@ -12,8 +12,11 @@ const members = ref([
   <ul>
     <li v-for="member in members" :key="member.empNr">{{ member.name }} - {{ member.age }}</li>
   </ul>
-
+  <!-- ES6 -->
   <!-- Destructuring -->
+  <ul>
+    <li v-for="{ name, empNr } in members" :key="empNr">{{ name }}</li>
+  </ul>
 </template>
 
 <style></style>

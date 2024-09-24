@@ -13,12 +13,9 @@ const parentCount = ref(0);
 
 <template>
   <h1>parentCount: {{ parentCount }}</h1>
-  <h3>1.無emit</h3>
-  <ButtonCounter />
-  <h3>2.emit(無參數)</h3>
-  <ButtonCounter />
-  <h3>3. emit(有參數)</h3>
-  <ButtonCounter />
+  <ButtonCounter :title="'child1'" :parentCount="parentCount" />
+  <ButtonCounter :title="'child2'" :parentCount @parentAdd="parentCount++" />
+  <ButtonCounter :title="'child3'" :parentCount @parentAdd="(n) => (parentCount += n)" />
 
   <!-- <h3>1.無emit</h3>
   <ButtonCounter :title="'child 1'" />
